@@ -1,0 +1,369 @@
+.header-top {
+    margin-top: 30px;
+}
+.header-menu-item {
+    width: 100%;
+}
+@media screen and (max-width: 566px) {
+    .header-menu-item {
+        display: block;
+    }
+}
+.header_menu ul {
+    list-style-type: none;
+    display: inline-block;
+    float: right;
+    padding-top: 0;
+    margin-left: 33px;
+
+
+}
+
+.header_menu ul:first-child {
+    border-left: 1px solid grey;
+}
+.logo {
+    display: inline;
+    width: 100%;
+}
+header {
+    background-image: url("../images/slide-1.jpg");
+    height: 600px;
+    position: relative;
+}
+.nav_background {
+    background-color: rgba(13, 47, 51, 0.7);
+    position: relative;
+    z-index: 99;
+
+    & > nav > ul {
+        // height: 0;
+        // overflow: hidden;
+        @media screen and (max-width:1138px) {
+            display: none;
+            clear: both;
+            padding: 0;
+            z-index: 3;
+        }
+        &.clicked {
+            display: block;
+        }
+        & > li {
+            @media screen and (max-width:1138px) {
+                display: block;
+                text-align: center;
+                border-bottom: 1px #F5DEB3 outset;
+            }
+        }
+    }
+
+}
+nav {
+    margin: 0 auto;
+}
+
+
+.menu-toggle {
+  background-color: transparent;
+  display: none;
+	/*position: absolute;*/
+    float: right;
+	right: 0;
+	height: 40px;
+	width: 50px;
+	margin: 10px;
+     border: 0;
+	cursor: pointer;
+}
+@media screen and (max-width: 1138px){
+    .menu-toggle {
+        display: block;
+    }
+}
+.menu-toggle:focus {
+  outline: 0;
+}
+
+.menu-toggle__bar,
+.menu-toggle__bar:before,
+.menu-toggle__bar:after {
+	display: block;
+	height: 5px;
+	width: 40px;
+	margin: 0 auto;
+	background-color:black;
+	border-radius: 2px;
+}
+
+.menu-toggle__bar:before,
+.menu-toggle__bar:after {
+	content: "";
+	position: relative;
+}
+
+.menu-toggle__bar:before {
+	bottom:10px;
+}
+
+.menu-toggle__bar:after {
+	top: 5px;
+}
+
+/* When clicked, the middle hamburger menu bar becomes transparent... */
+
+.menu-toggle__bar {
+  transition: background-color .2s ease-in-out .2s;
+}
+.menu-toggle--active .menu-toggle__bar {
+  background-color: transparent;
+  transition: background-color .2s ease-in-out .2s;
+}
+
+/* ...then the before and after lines move and rotate into a cross. */
+
+.menu-toggle__bar:before {
+  // transition: <property> <duration> <timing-function> <delay>;
+  -webkit-transition: bottom .2s ease-in-out, transform .3s ease-in-out .3s;
+  -o-transition: bottom .2s ease-in-out, transform .3s ease-in-out .3s;
+  -moz-transition: bottom .2s ease-in-out, transform .3s ease-in-out .3s;
+  transition: bottom .2s ease-in-out, transform .3s ease-in-out .3s;
+}
+
+.menu-toggle__bar:after {
+  -webkit-transition: top .2s ease-in-out, transform .3s ease-in-out .3s;
+  -o-transition: top .2s ease-in-out, transform .3s ease-in-out .3s;
+  -moz-transition: top .2s ease-in-out, transform .3s ease-in-out .3s;
+  transition: top .2s ease-in-out, transform .3s ease-in-out .3s;
+}
+
+.menu-toggle--active .menu-toggle__bar:before {
+  bottom: 0;
+  -webkit-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.menu-toggle--active .menu-toggle__bar:after {
+  top: -5px;
+  -webkit-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+
+
+header nav ul li {
+    display: inline-block;
+
+    padding: 8px;
+    background-color: rgba(13, 47, 51, 0);
+    transition: 0.5s;
+
+}
+header nav ul li:hover {
+background-color: rgba(183,159,99,1);
+color: white;
+text-decoration: none;
+}
+header nav ul li a {
+    list-style-type: none;
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+header nav ul li a:hover {
+    text-decoration: none;
+    color: white;
+}
+
+
+
+.title {
+    text-align: center;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.title h1 {
+    font-size: 60px;
+    font-family: 'Arimo', sans-serif;
+}
+.title h3 {
+    font-size: 20px;
+}
+.availability_wrap {
+    background-color: #2a425a;
+}
+.availability {
+    padding: 20px;
+}
+.availability button {
+    ;
+}
+.circle_icon {
+    color: white;
+    font-size: 20px;
+}
+.right-inner-addon {
+    position: relative;
+
+        input {
+            width: 100px;
+            box-sizing: border-box;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+            -webkit-transition: width 0.4s ease-in-out;
+            transition: width 0.4s ease-in-out;
+
+            &:focus {
+                width: 100%;
+            }
+        }
+    }
+
+.right-inner-addon i {
+    position: absolute;
+    right: 0px;
+    padding: 10px 12px;
+}
+.centered {
+    margin-top: 20px;
+    padding: 0;
+}
+.tour {
+    margin: 0 auto;
+    display: block;
+    float: none;
+    color: white;
+}
+.tour input {
+    color: black;
+    border-radius: 10px;
+    padding: 11px;
+    border: none;
+    margin-top: 10px;
+}
+@media screen and (max-width: 991px) {
+    .media-dropdown-changes{
+        display: block;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .tour {
+        margin: 0;
+        padding: 0;
+    }
+}
+main h1 {
+    text-align: center;
+    margin-top: 140px;
+    color: black;
+    background-image: url("images/wt-bg.png");
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    padding-bottom: 20px;
+    text-transform: uppercase;
+}
+main p {
+    text-align: center;
+    margin-top: 50px;
+}
+.gallery {
+    position: relative;
+
+    img {
+        width: 100%;
+    }
+}
+
+.img_info {
+    text-align: center;
+    display: block;
+    bottom: 0;
+    position: absolute;
+    background-color: rgba(13,13,13,0.5);
+    padding: 14px;
+    z-index: 100;
+    right: 0;
+    left: 0;
+}
+.img_info span {
+    text-align: center;
+    color: white;
+    font-size: 20px;
+}
+.article_info button{
+    background-color: #333360;
+    color: white;
+    padding: 15px 25px;
+    font-size: 17px;
+
+    @media screen and (max-width: 771px) {
+        text-align: center;
+        width: 100%;
+    }
+}
+.chateau {
+    text-align: center;
+}
+.chateau img {
+    border: 1px solid black;
+    border-radius: 40px;
+    padding: 10px;
+}
+
+.checkbox label:after {
+       content: '';
+       display: table;
+       clear: both;
+   }
+   .checkbox .cr {
+       position: relative;
+       display: inline-block;
+       border: 2px solid white;
+       border-radius: .25em;
+       width: 1.3em;
+       height: 1.3em;
+       float: left;
+       margin-right: .5em;
+       color: #9999ff;
+   }
+
+
+
+   .checkbox .cr .cr-icon {
+       position: absolute;
+       font-size: .8em;
+       line-height: 0;
+       top: 50%;
+       left: 20%;
+   }
+
+
+   .checkbox label input[type="checkbox"] {
+       display: none;
+   }
+
+   .checkbox label input[type="checkbox"] + .cr > .cr-icon {
+       transform: scale(3) rotateZ(-220deg);
+       opacity: 0;
+       transition: all .7s ease-in;
+   }
+
+   .checkbox label input[type="checkbox"]:checked + .cr > .cr-icon {
+       transform: scale(1) rotateZ(0deg);
+       opacity: 1;
+   }
+
+   .checkbox label input[type="checkbox"]:disabled + .cr{
+       opacity: .5;
+   }
+   .footer {
+       margin-top: 60px;
+   }

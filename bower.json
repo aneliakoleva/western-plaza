@@ -1,0 +1,24 @@
+{
+  "name": "new-project",
+  "description": "New project",
+  "main": "index.js",
+  "authors": [
+    "Anelia Koleva <anelia.i.koleva@gmail.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "project",
+    "new"
+  ],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bxslider-4": "^4.2.10"
+  }
+}
